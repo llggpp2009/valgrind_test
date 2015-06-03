@@ -9,4 +9,12 @@ int main()
 	string = malloc( strlen(abc)+1);
 	strcpy( string, abc);
 
+	char *x = (char*)malloc(20);
+	char *y = (char*)malloc(20);
+	x=y;
+	free(x);
+	free(y);
+	char * aaa = malloc(100);
+
+	return 0;
 }
