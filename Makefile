@@ -1,12 +1,9 @@
 SOURCE_FILE = test.c
-OBJECT_FILE= test.o
 TARGET = test
 
-TARGET:${OBJECT_FILE} 
-	gcc -g -o ${TARGET} ${OBJECT_FILE} 
-OBJECT_FILE: ${SOURCE_FILE} 
-	gcc -c ${SOURCE_FILE} 
+TARGET: 
+	gcc -g -o ${TARGET} ${SOURCE_FILE} 
 .PHONY: clean
 clean:
-	-rm ${OBJECT_FILE} ${TARGET}
+	-rm ${TARGET}
 
